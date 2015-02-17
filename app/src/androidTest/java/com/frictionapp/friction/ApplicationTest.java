@@ -1,4 +1,4 @@
-package com.example.android.apptest;
+package com.frictionapp.friction;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
