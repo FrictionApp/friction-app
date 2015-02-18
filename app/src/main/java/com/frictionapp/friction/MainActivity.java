@@ -39,7 +39,7 @@ public class MainActivity extends ActionBarActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-       sIS = savedInstanceState;
+
         if (isSignedIn) {
 
            super.onCreate(savedInstanceState);
@@ -61,11 +61,12 @@ public class MainActivity extends ActionBarActivity
        }
     }
 
-    public void doButtonClick(View e){
+
+    public void loginButton(View e){
         isSignedIn = true;
         if (isSignedIn) {
 
-            super.onCreate(sIS);
+            //super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
             mNavigationDrawerFragment = (NavigationDrawerFragment)
@@ -77,8 +78,17 @@ public class MainActivity extends ActionBarActivity
                     R.id.navigation_drawer,
                     (DrawerLayout) findViewById(R.id.drawer_layout));
         }
+      }
+
+
+    public void signUpButton(View view) {
+        setContentView(R.layout.general_information);
+    }
+
+    public void genInfoCont(View view) {
 
     }
+
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
