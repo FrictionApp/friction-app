@@ -20,27 +20,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
         android:ems="10"
         android:id="@+id/editText3"
         android:autoText="false"
         android:background="#FFFFFF"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="37dp"
         android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/editText4"
+        android:layout_alignStart="@+id/editText4"
+        android:hint="Full name"
+        android:textColorHint="@color/hintcolor"
+        android:textColor="#322F32"
+        android:paddingLeft="4dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Username"
         android:ems="10"
         android:id="@+id/editText4"
         android:background="#FFFFFF"
         android:layout_below="@+id/editText3"
         android:layout_alignLeft="@+id/editText5"
         android:layout_alignStart="@+id/editText5"
-        android:layout_marginTop="27dp" />
+        android:layout_marginTop="27dp"
+        android:hint="Username"
+        android:textColor="#322F32"
+        android:paddingLeft="4dp"
+        android:textColorHint="@color/hintcolor" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -48,12 +55,15 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/editText5"
-        android:text="Email"
         android:background="#FFFFFF"
+        android:layout_marginTop="25dp"
+        android:hint="Email"
+        android:textColor="#322F32"
+        android:textColorHint="@color/hintcolor"
         android:layout_below="@+id/editText4"
         android:layout_alignLeft="@+id/editText6"
-        android:layout_alignStart="@+id/editText6"
-        android:layout_marginTop="29dp" />
+        android:paddingLeft="4dp"
+        android:layout_alignStart="@+id/editText6" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -61,11 +71,15 @@
         android:inputType="phone"
         android:ems="10"
         android:id="@+id/editText6"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
         android:layout_below="@+id/editText5"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:text="Phone"
-        android:background="#FFFFFF" />
+        android:layout_alignLeft="@+id/editText7"
+        android:layout_alignStart="@+id/editText7"
+        android:hint="Phone Number"
+        android:textColor="#322F32"
+        android:paddingLeft="4dp"
+        android:textColorHint="@color/hintcolor" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -76,16 +90,21 @@
         android:layout_below="@+id/editText6"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
-        android:text="Password"
-        android:background="#FFFFFF" />
+        android:background="#FFFFFF"
+        android:hint="Password"
+        android:textColor="#322F32"
+        android:paddingLeft="4dp"
+        android:textColorHint="@color/hintcolor" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton3"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:src="@drawable/ic_launcher"
-        android:text="Continue" />
+        android:text="Continue"
+        android:layout_below="@+id/editText7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:onClick="ontoAboutMeButton" />
 
 </RelativeLayout>

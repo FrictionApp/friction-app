@@ -72,7 +72,7 @@ public class MainActivity extends ActionBarActivity
     }
 
 
-    public void loginButton(View e){
+    public void ontoHomeButton(View e){
         isSignedIn = true;
         if (isSignedIn) {
 
@@ -91,13 +91,13 @@ public class MainActivity extends ActionBarActivity
       }
 
 
-    public void signUpButton(View view) {
+    public void ontoGenInfoButton(View view) {
         setContentView(R.layout.general_information);
     }
 
-    public void genInfoCont(View view) {
+    public void ontoAboutMeButton(View view) { setContentView(R.layout.aboutme); }
 
-    }
+    public void ontoConnect(View view) { setContentView(R.layout.connect);}
 
     public void clearText(Text mTV) {
         //myTextView = (TextView) findViewById(R.id.myTextView);
