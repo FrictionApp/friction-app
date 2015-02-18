@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/connectPage">
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Access"
+        android:id="@+id/contact_access_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="95dp"
+        android:checked="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location Access"
+        android:id="@+id/location_access_button"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/contact_access_button"
+        android:layout_alignLeft="@+id/contact_access_button"
+        android:layout_alignStart="@+id/contact_access_button"
+        android:checked="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invite friends"
+        android:id="@+id/invite_friends_button"
+        android:layout_above="@+id/facebook_button"
+        android:layout_alignLeft="@+id/location_access_button"
+        android:layout_alignStart="@+id/location_access_button"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Facebook"
+        android:id="@+id/facebook_button"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/invite_friends_button"
+        android:layout_alignStart="@+id/invite_friends_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:id="@+id/finish_button"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/facebook_button"
+        android:layout_alignLeft="@+id/facebook_button"
+        android:layout_alignStart="@+id/facebook_button"
+        android:onClick="loginButton" />
+
+</RelativeLayout>

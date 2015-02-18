@@ -4,4 +4,5 @@
     <color name="theme_light">#D9D9D5</color>
     <color name="theme_cyan">#2CA4FF</color>
     <color name="white">#FFFFFF</color>
+    <color name="hintcolor">#808080</color>
 </resources>
