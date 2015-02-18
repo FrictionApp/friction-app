@@ -23,9 +23,11 @@
         android:text="Name"
         android:ems="10"
         android:id="@+id/editText3"
+        android:autoText="false"
+        android:background="#FFFFFF"
+        android:layout_marginTop="64dp"
         android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -34,9 +36,11 @@
         android:text="Username"
         android:ems="10"
         android:id="@+id/editText4"
+        android:background="#FFFFFF"
         android:layout_below="@+id/editText3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp" />
+        android:layout_alignLeft="@+id/editText5"
+        android:layout_alignStart="@+id/editText5"
+        android:layout_marginTop="27dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -44,9 +48,12 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/editText5"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="Email" />
+        android:text="Email"
+        android:background="#FFFFFF"
+        android:layout_below="@+id/editText4"
+        android:layout_alignLeft="@+id/editText6"
+        android:layout_alignStart="@+id/editText6"
+        android:layout_marginTop="29dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -57,7 +64,8 @@
         android:layout_below="@+id/editText5"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
-        android:text="Phone" />
+        android:text="Phone"
+        android:background="#FFFFFF" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -68,7 +76,8 @@
         android:layout_below="@+id/editText6"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
-        android:text="Password" />
+        android:text="Password"
+        android:background="#FFFFFF" />
 
     <ImageButton
         android:layout_width="wrap_content"

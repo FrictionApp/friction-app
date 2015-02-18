@@ -30,21 +30,54 @@ public class MainActivity extends ActionBarActivity
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
+
+    public static boolean isSignedIn=false;
+    public static Bundle sIS;
+
+
     private CharSequence mTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+       sIS = savedInstanceState;
+        if (isSignedIn) {
 
-        mNavigationDrawerFragment = (NavigationDrawerFragment)
-                getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
-        mTitle = getTitle();
+           super.onCreate(savedInstanceState);
+           setContentView(R.layout.activity_main);
 
-        // Set up the drawer.
-        mNavigationDrawerFragment.setUp(
-                R.id.navigation_drawer,
-                (DrawerLayout) findViewById(R.id.drawer_layout));
+           mNavigationDrawerFragment = (NavigationDrawerFragment)
+                   getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
+           mTitle = getTitle();
+
+           // Set up the drawer.
+           mNavigationDrawerFragment.setUp(
+                   R.id.navigation_drawer,
+                   (DrawerLayout) findViewById(R.id.drawer_layout));
+       }
+
+        else {
+           super.onCreate(savedInstanceState);
+           setContentView(R.layout.initial_screen);
+       }
+    }
+
+    public void doButtonClick(View e){
+        isSignedIn = true;
+        if (isSignedIn) {
+
+            super.onCreate(sIS);
+            setContentView(R.layout.activity_main);
+
+            mNavigationDrawerFragment = (NavigationDrawerFragment)
+                    getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
+            mTitle = getTitle();
+
+            // Set up the drawer.
+            mNavigationDrawerFragment.setUp(
+                    R.id.navigation_drawer,
+                    (DrawerLayout) findViewById(R.id.drawer_layout));
+        }
+
     }
 
     @Override
@@ -89,7 +122,7 @@ public class MainActivity extends ActionBarActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        if (!mNavigationDrawerFragment.isDrawerOpen()) {
+        if (isSignedIn && !mNavigationDrawerFragment.isDrawerOpen()) {
             // Only show items in the action bar relevant to this screen
             // if the drawer is not showing. Otherwise, let the drawer
             // decide what to show in the action bar.
