@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.frictionapp.friction.dummy.DummyContent;
@@ -26,7 +27,8 @@ import com.frictionapp.friction.dummy.DummyContent;
  * Activities containing this fragment MUST implement the {@link OnFragmentInteractionListener}
  * interface.
  */
-public class FeedFragment extends Fragment implements AbsListView.OnItemClickListener {
+public class FeedFragment extends Fragment
+        implements AbsListView.OnItemClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -139,10 +141,12 @@ public class FeedFragment extends Fragment implements AbsListView.OnItemClickLis
      * the list is empty. If you would like to change the text, call this method
      * to supply the text it should use.
      */
-    public void setEmptyText(CharSequence emptyText) {
+    public void setEmptyText(CharSequence emptyText)
+    {
         View emptyView = mFeedListView.getEmptyView();
 
-        if (emptyView instanceof TextView) {
+        if (emptyView instanceof TextView)
+        {
             ((TextView) emptyView).setText(emptyText);
         }
     }
@@ -157,9 +161,16 @@ public class FeedFragment extends Fragment implements AbsListView.OnItemClickLis
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface OnFragmentInteractionListener {
+    public interface OnFragmentInteractionListener
+    {
         // TODO: Update argument type and name
         public void onFragmentInteraction(String id);
+    }
+
+    public void onFragmentInteraction(String id)
+    {
+//        Toast toast = Toast.makeText(this, "Fragment success", Toast.LENGTH_SHORT);
+//        toast.show();
     }
 
     private ActionBar getActionBar() {
