@@ -14,6 +14,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 public class MainActivity extends ActionBarActivity
@@ -94,6 +97,11 @@ public class MainActivity extends ActionBarActivity
 
     public void genInfoCont(View view) {
 
+    }
+
+    public void clearText(Text mTV) {
+        //myTextView = (TextView) findViewById(R.id.myTextView);
+        mTV.setTextContent("");
     }
 
 
