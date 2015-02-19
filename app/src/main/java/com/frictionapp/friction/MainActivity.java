@@ -1,6 +1,7 @@
 package com.frictionapp.friction;
 
 import android.app.Activity;
+import android.app.LauncherActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.app.Fragment;
@@ -14,9 +15,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import org.w3c.dom.Text;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity
@@ -34,7 +39,6 @@ public class MainActivity extends ActionBarActivity
 
     public static boolean isSignedIn=false;
     public static Bundle sIS;
-
     private CharSequence mTitle;
 
     //ActionBar hamburger toggle
@@ -110,7 +114,7 @@ public class MainActivity extends ActionBarActivity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, new FeedFragment())
+                .replace(R.id.container, FeedFragment.newInstance(position+1))
                 .commit();
 
     }
@@ -119,22 +123,27 @@ public class MainActivity extends ActionBarActivity
         switch (number) {
             case 1:
                 mTitle = getString(R.string.title_section1);
-                Log.d("NavDrawer", "Choice 1 Selected");
+                Log.d("NavDrawer", getString(R.string.title_section1) + " Selected");
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
+                Log.d("NavDrawer", getString(R.string.title_section2) + " Selected");
                 break;
             case 3:
                 mTitle = getString(R.string.title_section3);
+                Log.d("NavDrawer", getString(R.string.title_section3) + " Selected");
                 break;
             case 4:
                 mTitle = getString(R.string.title_section4);
+                Log.d("NavDrawer", getString(R.string.title_section4) + " Selected");
                 break;
             case 5:
                 mTitle = getString(R.string.title_section5);
+                Log.d("NavDrawer", getString(R.string.title_section5) + " Selected");
                 break;
             case 6:
                 mTitle = getString(R.string.title_section6);
+                Log.d("NavDrawer", getString(R.string.title_section6) + " Selected");
                 break;
         }
     }
@@ -185,6 +194,11 @@ public class MainActivity extends ActionBarActivity
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
 
+        //init for viewing the feed
+        private ListView feedView;
+        private TextView Heading;
+        private String[] myList = {"Put", "API", "Code", "Here"};
+
         /**
          * Returns a new instance of this fragment for the given section
          * number.
@@ -194,6 +208,7 @@ public class MainActivity extends ActionBarActivity
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
+            Log.d("Init Fragments", "Fragment " + sectionNumber + " initialized");
             return fragment;
         }
 

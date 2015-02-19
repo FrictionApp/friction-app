@@ -5,4 +5,5 @@
     <color name="theme_cyan">#2CA4FF</color>
     <color name="white">#FFFFFF</color>
     <color name="hintcolor">#808080</color>
+    <color name="black">#000000</color>
 </resources>
