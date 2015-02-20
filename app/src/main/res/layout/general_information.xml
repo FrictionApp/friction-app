@@ -22,13 +22,12 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/editText3"
-        android:autoText="false"
         android:background="#FFFFFF"
         android:layout_marginTop="37dp"
         android:layout_below="@+id/imageView"
         android:layout_alignLeft="@+id/editText4"
         android:layout_alignStart="@+id/editText4"
-        android:hint="Full name"
+        android:hint="@string/signup_hint_fullname"
         android:textColorHint="@color/hintcolor"
         android:textColor="#322F32"
         android:paddingLeft="4dp" />
@@ -36,7 +35,6 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/editText4"
         android:background="#FFFFFF"
@@ -44,10 +42,11 @@
         android:layout_alignLeft="@+id/editText5"
         android:layout_alignStart="@+id/editText5"
         android:layout_marginTop="27dp"
-        android:hint="Username"
+        android:hint="@string/signup_hint_username"
         android:textColor="#322F32"
         android:paddingLeft="4dp"
-        android:textColorHint="@color/hintcolor" />
+        android:textColorHint="@color/hintcolor"
+        android:inputType="text" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -76,7 +75,7 @@
         android:layout_below="@+id/editText5"
         android:layout_alignLeft="@+id/editText7"
         android:layout_alignStart="@+id/editText7"
-        android:hint="Phone Number"
+        android:hint="@string/signup_hint_phone"
         android:textColor="#322F32"
         android:paddingLeft="4dp"
         android:textColorHint="@color/hintcolor" />
@@ -91,7 +90,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
         android:background="#FFFFFF"
-        android:hint="Password"
+        android:hint="@string/signup_hint_password"
         android:textColor="#322F32"
         android:paddingLeft="4dp"
         android:textColorHint="@color/hintcolor" />

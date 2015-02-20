@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" >
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profPicButton"
+        android:cropToPadding="true"
+        android:clickable="true"
+        android:src="@drawable/ic_launcher"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/user_realname"
+        android:id="@+id/profName"
+        android:textColor="@android:color/black"
+        android:layout_alignTop="@+id/profPicButton"
+        android:layout_toRightOf="@+id/profPicButton"
+        android:layout_toEndOf="@+id/profPicButton"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/user_username"
+        android:id="@+id/profUsername"
+        android:layout_below="@+id/profName"
+        android:layout_alignLeft="@+id/profName"
+        android:layout_alignStart="@+id/profName"
+        android:textColor="@color/hintcolor" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profEditButton"
+        android:src="@android:drawable/ic_menu_edit"
+        android:longClickable="true"
+        android:clickable="true"
+        android:background="@color/theme_dark"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:nestedScrollingEnabled="true"
+        android:layout_margin="12dp"
+        android:padding="6dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/profPicButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/user_location"
+            android:id="@+id/profLocation"
+            android:layout_marginTop="0dp"
+            android:textColor="@android:color/black"
+            android:clickable="false"
+            android:padding="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/user_bio"
+            android:id="@+id/profBio"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="0dp"
+            android:padding="6dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.03"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_margin="12dp"
+            android:padding="0dp"
+            android:dividerPadding="0dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/user_friends_num"
+                android:id="@+id/profNumFriends"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/user_friends_title"
+                android:id="@+id/textView"
+                android:textColor="@color/hintcolor"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:id="@+id/profNumsSpace"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="5"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/user_interests_num"
+                android:id="@+id/textView2"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/user_interests_title"
+                android:id="@+id/textView3"
+                android:textColor="@color/hintcolor"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp" />
+        </LinearLayout>
+
+        <TabHost
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabHost"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"></TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"></LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

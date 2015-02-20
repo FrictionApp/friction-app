@@ -4,9 +4,14 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.text.BreakIterator;
 
 
 /**
@@ -26,8 +31,12 @@ public class DrawerSubFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private int sectionNumber;
 
     private OnFragmentInteractionListener mListener;
+    private TextView mFeedView;
+    private View rootView;
+    private static final String ARG_SECTION_NUMBER = "section_number";
 
     /**
      * Use this factory method to create a new instance of
@@ -38,9 +47,10 @@ public class DrawerSubFragment extends Fragment {
      * @return A new instance of fragment FeedFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DrawerSubFragment newInstance(String param1, String param2) {
+    public static DrawerSubFragment newInstance(int sectionNumber, String param1, String param2) {
         DrawerSubFragment fragment = new DrawerSubFragment();
         Bundle args = new Bundle();
+        args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
@@ -57,14 +67,68 @@ public class DrawerSubFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+            sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
         }
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_feed, container, false);
+        //returnable view
+        //View rootView;
+        switch (sectionNumber) {
+            //Feed fragment init
+            case 1:
+                rootView = inflater.inflate(R.layout.fragment_feed, container, false);
+                mFeedView = (TextView) rootView.findViewById(R.id.FeedTextView);
+                mFeedView.setText(sectionNumber + " " + mParam2);
+                logCreate(getString(R.string.title_section1));
+                break;
+
+            //Find fragment init
+            case 2:
+                rootView = inflater.inflate(R.layout.fragment_find, container, false);
+                logCreate(getString(R.string.title_section2));
+                break;
+
+            //Friends fragment init
+            case 3:
+                rootView = inflater.inflate(R.layout.fragment_friends, container, false);
+                logCreate(getString(R.string.title_section3));
+                break;
+
+            //Ping fragment init
+            case 4:
+                rootView = inflater.inflate(R.layout.fragment_pings, container, false);
+                logCreate(getString(R.string.title_section4));
+                break;
+
+            //About fragment init
+            case 5:
+                rootView = inflater.inflate(R.layout.fragment_about, container, false);
+                logCreate(getString(R.string.title_section5));
+                break;
+
+            //Settings fragment init
+            case 6:
+                rootView = inflater.inflate(R.layout.fragment_settings, container, false);
+                logCreate(getString(R.string.title_section6));
+                break;
+
+            //Help fragment init
+            case 7:
+                rootView = inflater.inflate(R.layout.fragment_help, container, false);
+                logCreate(getString(R.string.title_section7));
+                break;
+        }
+        return rootView;
+    }
+
+    private void logCreate(String create)
+    {
+        Log.d("Create", create + " was created successfully");
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -79,6 +143,8 @@ public class DrawerSubFragment extends Fragment {
         super.onAttach(activity);
         try {
             mListener = (OnFragmentInteractionListener) activity;
+            ((MainActivity) activity).onSectionAttached(
+                    getArguments().getInt(ARG_SECTION_NUMBER));
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnFragmentInteractionListener");

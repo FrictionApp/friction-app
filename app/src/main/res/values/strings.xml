@@ -7,12 +7,52 @@
     <string name="title_section3">Friends</string>
     <string name="title_section4">Pings</string>
     <string name="title_section5">About Me</string>
-    <string name="title_section6">Help and Feedback</string>
+    <string name="title_section6">Settings</string>
+    <string name="title_section7">Help and Feedback</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="user_bio">Bio</string>
+    <string name="user_location">Location</string>
+    <string name="user_realname">Real Name</string>
+    <string name="user_username">\@UserName</string>
+    <string name="user_friends_num">XX</string>
+    <string name="user_interests_num">XX</string>
+    <string name="user_friends_title">FRIENDS</string>
+    <string name="user_interests_title">INTERESTS</string>
+
+    <string name="login_button_login">Login</string>
+    <string name="login_hint_password">Password</string>
+    <string name="login_hint_username">Username/Email</string>
+    <string name="login_button_signup">Sign Up</string>
+
+    <string name="signup_hint_fullname">Full Name</string>
+    <string name="signup_hint_username">Username</string>
+    <string name="signup_hint_email">Email</string>
+    <string name="signup_hint_phone">Phone Number</string>
+    <string name="signup_hint_password">Password</string>
+    <string name="signup_button_continue">Continue</string>
+
+    <string name="connect_switch_contact_access">Contact Access</string>
+    <string name="connect_switch_loc_access">Location Access</string>
+    <string name="connect_button_invite">Invite Friends</string>
+    <string name="connect_button_facebook">Facebook</string>
+    <string name="connect_button_finish">Finish</string>
+
+
+
+
+
+
+
+
+
+
+
+
     <string name="really_long_string">Note that a ScrollView can only contain a single child element so if you need multiple things to
         be scrollable, you need to wrap that content into a layout as shown above. In certain situations, you want to position content
         beneath the end of the scrollable content area. For example for a "terms of service" where you can only accept once youve scrolled

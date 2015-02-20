@@ -20,12 +20,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/login_button"
-        android:src="@drawable/ic_launcher"
         android:layout_marginTop="25dp"
         android:onClick="ontoHomeButton"
         android:nestedScrollingEnabled="false"
         android:clickable="true"
-        android:text="Login"
+        android:text="@string/login_button_login"
         android:layout_below="@+id/editText"
         android:layout_alignLeft="@+id/editText"
         android:layout_alignStart="@+id/editText" />
@@ -34,10 +33,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/sign_up_button"
-        android:src="@drawable/ic_launcher"
         android:nestedScrollingEnabled="false"
         android:onClick="ontoGenInfoButton"
-        android:text="Sign up"
+        android:text="@string/login_button_signup"
         android:layout_alignTop="@+id/login_button"
         android:layout_alignRight="@+id/editText"
         android:layout_alignEnd="@+id/editText" />
@@ -53,10 +51,9 @@
         android:layout_marginTop="39dp"
         android:inputType="textPassword"
         android:textColor="#322F32"
-        android:password="true"
         android:paddingLeft="4dp"
         android:textColorHint="@color/hintcolor"
-        android:hint="Password" />
+        android:hint="@string/login_hint_password" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -71,7 +68,7 @@
         android:paddingLeft="4dp"
         android:nestedScrollingEnabled="false"
         android:textColor="#322F32"
-        android:hint="Enter Email"
+        android:hint="@string/login_hint_username"
         android:singleLine="true"
         android:textColorHint="@color/hintcolor" />
     <!-- gitcheck -->

@@ -6,7 +6,7 @@
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contact Access"
+        android:text="@string/connect_switch_contact_access"
         android:id="@+id/contact_access_button"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -19,7 +19,7 @@
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Location Access"
+        android:text="@string/connect_switch_loc_access"
         android:id="@+id/location_access_button"
         android:layout_marginTop="21dp"
         android:layout_below="@+id/contact_access_button"
@@ -30,7 +30,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Invite friends"
+        android:text="@string/connect_button_invite"
         android:id="@+id/invite_friends_button"
         android:layout_above="@+id/facebook_button"
         android:layout_alignLeft="@+id/location_access_button"
@@ -40,7 +40,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Facebook"
+        android:text="@string/connect_button_facebook"
         android:id="@+id/facebook_button"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/invite_friends_button"
@@ -49,7 +49,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Finish"
+        android:text="@string/connect_button_finish"
         android:id="@+id/finish_button"
         android:layout_marginTop="21dp"
         android:layout_below="@+id/facebook_button"

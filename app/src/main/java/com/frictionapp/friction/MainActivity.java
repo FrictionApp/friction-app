@@ -108,7 +108,7 @@ public class MainActivity extends ActionBarActivity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, DrawerSubFragment.newInstance((String) mTitle, "Friction"))
+                .replace(R.id.container, DrawerSubFragment.newInstance(position+1, (String)mTitle, "Friction"))
                 .commit();
 
     }
@@ -117,27 +117,31 @@ public class MainActivity extends ActionBarActivity
         switch (number) {
             case 1:
                 mTitle = getString(R.string.title_section1);
-                Log.d("NavDrawer", getString(R.string.title_section1) + " Selected");
+                Log.d("NavDrawer", mTitle + " Selected");
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
-                Log.d("NavDrawer", getString(R.string.title_section2) + " Selected");
+                Log.d("NavDrawer", mTitle + " Selected");
                 break;
             case 3:
                 mTitle = getString(R.string.title_section3);
-                Log.d("NavDrawer", getString(R.string.title_section3) + " Selected");
+                Log.d("NavDrawer", mTitle + " Selected");
                 break;
             case 4:
                 mTitle = getString(R.string.title_section4);
-                Log.d("NavDrawer", getString(R.string.title_section4) + " Selected");
+                Log.d("NavDrawer", mTitle + " Selected");
                 break;
             case 5:
                 mTitle = getString(R.string.title_section5);
-                Log.d("NavDrawer", getString(R.string.title_section5) + " Selected");
+                Log.d("NavDrawer", mTitle + " Selected");
                 break;
             case 6:
                 mTitle = getString(R.string.title_section6);
-                Log.d("NavDrawer", getString(R.string.title_section6) + " Selected");
+                Log.d("NavDrawer", mTitle + " Selected");
+
+            case 7:
+                mTitle = getString(R.string.title_section7);
+                Log.d("NavDrawer", mTitle + " Selected");
                 break;
         }
     }

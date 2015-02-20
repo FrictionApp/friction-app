@@ -20,13 +20,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <ListView
-                android:id="@+id/FeedListView"
+            <TextView
+                android:id="@+id/FeedTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="@string/really_long_string"
                 android:textColor="@android:color/black">
-            </ListView>
+            </TextView>
 
             <Button
                 android:id="@+id/btn_act"
