@@ -1,7 +1,7 @@
 <resources>
 
     <!-- the theme applied to the application or activity -->
-    <style name="CustomActionBarTheme"
+    <style name="FrictionAppThemeLight"
         parent="@style/Theme.AppCompat">
         <item name="android:actionBarStyle">@style/MyActionBar</item>
         <item name="android:actionBarTabTextStyle">@style/MyActionBarTabText</item>

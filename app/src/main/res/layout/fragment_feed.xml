@@ -5,12 +5,11 @@
     android:paddingTop="0dp"
     android:paddingBottom="0dp"
     tools:context=".MainActivity$PlaceholderFragment"
-    android:orientation="vertical">
-
+    android:orientation="vertical" >
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/scrollView"
+        android:id="@+id/feedScrollView"
         android:layout_gravity="center" >
         <LinearLayout
             android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -21,20 +20,20 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-           <TextView
-              android:id="@+id/tv_long"
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               android:text="@string/really_long_string"
-               android:textColor="@android:color/black">
-           </TextView>
+            <TextView
+                android:id="@+id/FeedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/really_long_string"
+                android:textColor="@android:color/black">
+            </TextView>
 
-           <Button
-              android:id="@+id/btn_act"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="Like" >
-           </Button>
+            <Button
+                android:id="@+id/btn_act"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Like" >
+            </Button>
         </LinearLayout>
     </ScrollView>
-</FrameLayout>
+</FrameLayout >

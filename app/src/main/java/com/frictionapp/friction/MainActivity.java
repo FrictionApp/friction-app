@@ -1,31 +1,25 @@
 package com.frictionapp.friction;
 
-import android.app.Activity;
-import android.app.LauncherActivity;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
-import org.w3c.dom.Text;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.w3c.dom.Text;
+
+import static android.app.PendingIntent.getActivity;
 
 
 public class MainActivity extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks, DrawerSubFragment.OnFragmentInteractionListener{
 
     //Fragment managing the behaviors, interactions and presentation of the navigation drawer.
     private NavigationDrawerFragment mNavigationDrawerFragment;
@@ -114,7 +108,7 @@ public class MainActivity extends ActionBarActivity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, FeedFragment.newInstance(position+1))
+                .replace(R.id.container, DrawerSubFragment.newInstance(position+1, (String)mTitle, "Friction"))
                 .commit();
 
     }
@@ -123,27 +117,31 @@ public class MainActivity extends ActionBarActivity
         switch (number) {
             case 1:
                 mTitle = getString(R.string.title_section1);
-                Log.d("NavDrawer", getString(R.string.title_section1) + " Selected");
+                Log.d("NavDrawer", mTitle + " Selected");
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
-                Log.d("NavDrawer", getString(R.string.title_section2) + " Selected");
+                Log.d("NavDrawer", mTitle + " Selected");
                 break;
             case 3:
                 mTitle = getString(R.string.title_section3);
-                Log.d("NavDrawer", getString(R.string.title_section3) + " Selected");
+                Log.d("NavDrawer", mTitle + " Selected");
                 break;
             case 4:
                 mTitle = getString(R.string.title_section4);
-                Log.d("NavDrawer", getString(R.string.title_section4) + " Selected");
+                Log.d("NavDrawer", mTitle + " Selected");
                 break;
             case 5:
                 mTitle = getString(R.string.title_section5);
-                Log.d("NavDrawer", getString(R.string.title_section5) + " Selected");
+                Log.d("NavDrawer", mTitle + " Selected");
                 break;
             case 6:
                 mTitle = getString(R.string.title_section6);
-                Log.d("NavDrawer", getString(R.string.title_section6) + " Selected");
+                Log.d("NavDrawer", mTitle + " Selected");
+
+            case 7:
+                mTitle = getString(R.string.title_section7);
+                Log.d("NavDrawer", mTitle + " Selected");
                 break;
         }
     }
@@ -184,25 +182,25 @@ public class MainActivity extends ActionBarActivity
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+        Log.d("Feed", "Fragment tapped");
+    }
+
     /**
      * A placeholder fragment containing a simple view.
-     */
+     *
     public static class FeedFragment extends Fragment {
         /**
          * The fragment argument representing the section number for this
          * fragment.
-         */
+         *
         private static final String ARG_SECTION_NUMBER = "section_number";
-
-        //init for viewing the feed
-        private ListView feedView;
-        private TextView Heading;
-        private String[] myList = {"Put", "API", "Code", "Here"};
 
         /**
          * Returns a new instance of this fragment for the given section
          * number.
-         */
+         *
         public static FeedFragment newInstance(int sectionNumber) {
             FeedFragment fragment = new FeedFragment();
             Bundle args = new Bundle();
@@ -229,6 +227,6 @@ public class MainActivity extends ActionBarActivity
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
 
-    }
+    }*/
 
 }
