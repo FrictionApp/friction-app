@@ -55,6 +55,6 @@
         android:layout_below="@+id/facebook_button"
         android:layout_alignLeft="@+id/facebook_button"
         android:layout_alignStart="@+id/facebook_button"
-        android:onClick="loginButton" />
+        android:onClick="ontoHomeButton" />
 
 </RelativeLayout>
