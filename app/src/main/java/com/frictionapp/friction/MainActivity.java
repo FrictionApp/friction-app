@@ -12,9 +12,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.Toast;
-
+import android.view.View;
+import android.widget.SearchView;
+import android.widget.TextView;
+import android.widget.EditText;
 import org.w3c.dom.Text;
-
 import static android.app.PendingIntent.getActivity;
 
 
@@ -96,6 +98,45 @@ public class MainActivity extends ActionBarActivity
     public void ontoAboutMeButton(View view) { setContentView(R.layout.aboutme); }
 
     public void ontoConnect(View view) { setContentView(R.layout.connect);}
+
+    public SearchView input;
+    public EditText output;
+
+
+   public void pushInterests(final View w) {
+
+       input = (SearchView) findViewById(R.id.aboutme_searchview);
+
+       input.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+           @Override
+           public boolean onQueryTextSubmit(String query) {
+               // Do something when user his enter on keyboard
+               w.clearFocus();
+               return false;
+           }
+
+           @Override
+           public boolean onQueryTextChange(String newText) {
+               // Do something while user is entering text
+               return false;
+           }
+       });
+//        input = (SearchView) findViewById(R.id.aboutme_searchview);
+//        output.setText(input.getQuery());
+//
+//          TextView ugh = (TextView) searchView.findViewById(R.id.aboutme_searchview);
+//          TextView setThis = (TextView) findViewById(R.id.aboutme_textbox);
+//          ugh.setText(output.toString());
+//
+//
+       output.setText(input.getQuery());
+
+       TextView setThis = (TextView) findViewById(R.id.aboutme_textbox);
+       setThis.setText(output.toString());
+    }
+
+
 
     public void clearText(Text mTV) {
         //myTextView = (TextView) findViewById(R.id.myTextView);
